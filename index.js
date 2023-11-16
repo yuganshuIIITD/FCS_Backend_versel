@@ -14,6 +14,10 @@ app.use('/api/property',require('./routes/property'))
 app.use('/api/transaction',require('./routes/transaction'))
 app.use('/api/contract',require('./routes/contract'))
 app.use('/api/payment',require('./routes/payment'))
+app.get('/', (req, res) => {
+  res.send('Hello, this is the root route!');
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
